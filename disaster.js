@@ -1,6 +1,6 @@
 const fetchUrl = require('fetch').fetchUrl;
 
-function getDisasterEvents() {
+function getDisasterEvents(callback) {
   fetchUrl(`https://eonet.sci.gsfc.nasa.gov/api/v3/events?limit=11`, (error, meta, body) => {
     const events = JSON.parse(body).events;
 
@@ -12,9 +12,9 @@ function getDisasterEvents() {
     }
     });
 
-    console.log(disasters)
-  })
+    callback(disasters);
+  });
 }
 
 
-getDisasterEvents();
+module.exports = getDisasterEvents;
