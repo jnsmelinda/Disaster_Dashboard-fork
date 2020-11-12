@@ -5,4 +5,3 @@ module.exports = function(app) {
     getDisasterEvents(disasters => res.json(disasters));
   });
 }
-
