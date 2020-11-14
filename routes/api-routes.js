@@ -1,3 +1,4 @@
+
 const getDisasterEvents = require('../disaster.js');
 
 module.exports = function(app) {
