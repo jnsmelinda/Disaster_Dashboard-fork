@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Send every request to the React app
-require('./routes/api-routes.js')(app);
+//require('./routes/api-routes.js')(app);
 
 
 
