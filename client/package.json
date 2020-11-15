@@ -2,6 +2,7 @@
   "name": "diaster_dashboard",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@okta/okta-react": "^1.0.2",
     "@okta/okta-signin-widget": "^2.9.0",
