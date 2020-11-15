@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/pages/Home';
 import Staff from './components/pages/Staff';
 import Login from './components/auth/Login';
+import Disasters from './components/disasters';
 
 import './App.css';
 
@@ -35,6 +36,7 @@ class App extends Component {
                 )}
               />
               <Route path="/implicit/callback" component={ImplicitCallback} />
+              <Route path="/disasters" component={Disasters}></Route>
             </div>
           </div>
         </Security>
