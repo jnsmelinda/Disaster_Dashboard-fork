@@ -19,13 +19,19 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
+
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/puppies">
+                <Link className="nav-link" to="/Dashboard">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Puppies">
                   Puppies
                 </Link>
               </li>
