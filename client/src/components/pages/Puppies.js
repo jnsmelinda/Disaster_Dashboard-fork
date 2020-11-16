@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-const SEARCH_KEY = 'cute puppy kitten';
+// const SEARCH_KEY = 'cute puppy kitten';
 
 class RandomGif extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       imageSrc: '',
-      keyword: 'cute puppy kitten',
+      keyword: 'cute puppies',
       apiKey: 'afea92ac6eff442ba6fca79368717d0d',
     }
 
