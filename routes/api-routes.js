@@ -11,4 +11,10 @@ module.exports = function (app) {
       .then((result) => res.json(result))
       .catch((err) => next(err));
   });
+
+  app.get('/api/readykit/:id', function (req, res, next) {
+    db.ReadyKit.findByPk(req.params.id)
+      .then((result) => res.json(result))
+      .catch((err) => next(err));
+  });
 }
