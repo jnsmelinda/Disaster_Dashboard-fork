@@ -1,5 +1,6 @@
 [
   {
+    "currentUserName": "ann",
     "water": true,
     "non_perishable_food": false,
     "radio": false,
@@ -17,6 +18,7 @@
     "medications": true
   },
   {
+    "currentUserName": "tom",
     "water": false,
     "non_perishable_food": true,
     "radio": false,

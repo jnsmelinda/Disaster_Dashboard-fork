@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var ReadyKit = sequelize.define("ReadyKit", {
+    currentUserName: DataTypes.STRING,
     water: DataTypes.BOOLEAN,
     non_perishable_food: DataTypes.BOOLEAN,
     radio: DataTypes.BOOLEAN,

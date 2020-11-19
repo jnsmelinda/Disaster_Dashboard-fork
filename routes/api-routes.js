@@ -17,4 +17,11 @@ module.exports = function (app) {
       .then((result) => res.json(result))
       .catch((err) => next(err));
   });
+
+  app.get('/api/readykit/search/:currentUserName', function (req, res, next) {
+    console.log(req.params.currentUserName);
+    db.ReadyKit.findOne({ where: { currentUserName:  req.params.currentUserName } } )
+      .then((result) => res.json(result))
+      .catch((err) => next(err));
+  });
 }
