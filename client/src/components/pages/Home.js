@@ -36,7 +36,7 @@ export default withAuth(
         <div>
           <p className="lead">
             You have passed the test,{' '}
-            <Link to="/staff">click here to enter the Bunker</Link>
+            <Link to="/Dashboard">click here to enter the Bunker</Link>
           </p>
           <button className="btn btn-light btn-lg" onClick={this.logout}>
             Logout
