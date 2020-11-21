@@ -41,9 +41,8 @@ class Dashboard extends Component {
           <div id='app'></div>
           <div className="card" id = 'covid'>
             <h2>Covid Data Goes Here</h2>
-            <ReadyKit/>
           </div>
-
+          <ReadyKit username={this.state.currentUserName}></ReadyKit>
       </div>
     );
   }
