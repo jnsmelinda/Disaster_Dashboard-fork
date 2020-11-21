@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReadyKit from '../readykit';
 import Stocks from '../stocks/stocks.js';
+import Meteroids from '../meteroids/meteroids.js';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -28,8 +29,7 @@ class Dashboard extends Component {
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'nasa'>
-            <h2>Space Data Goes Here</h2>
-              <p>KJ Data</p>
+     <Meteroids/>
           </div>
           <br></br>
           <div id='app'></div>
@@ -39,11 +39,10 @@ class Dashboard extends Component {
           </div>
           <br></br>
           <div id='app'></div>
-          <div className="card" id = 'covid'>
-            <h2>Covid Data Goes Here</h2>
-            <ReadyKit/>
+          <div className="card" id = 'ReadyKit'>
+            <h2>ReadyKit</h2>
+            <ReadyKit username={this.state.currentUserName}/>
           </div>
-
       </div>
     );
   }
