@@ -21,14 +21,14 @@ class ReadyKit extends React.Component {
         {"non perishable food: " + this.state.readyKit.non_perishable_food}<br></br>
         {"batteries: " + this.state.readyKit.batteries}<br></br>
         {"flashlight: " + this.state.readyKit.flashlight}<br></br>
-        {"first_aid_kit: " + this.state.readyKit.first_aid_kit}<br></br>
+        {"first aid kit: " + this.state.readyKit.first_aid_kit}<br></br>
         {"whistle: " + this.state.readyKit.whistle}<br></br>
-        {"readyKit.dust_mask: " + this.state.readyKit.dust_mask}<br></br>
-        {"moist_towlettes: " + this.state.readyKit.moist_towlettes}<br></br>
-        {"garbadge_bags: " + this.state.readyKit.garbadge_bags}<br></br>
+        {"dust mask: " + this.state.readyKit.dust_mask}<br></br>
+        {"moist towlettes: " + this.state.readyKit.moist_towlettes}<br></br>
+        {"garbadge bags: " + this.state.readyKit.garbadge_bags}<br></br>
         {"wrench: " + this.state.readyKit.wrench}<br></br>
-        {"can_opener: " + this.state.readyKit.can_opener}<br></br>
-        {"local_map: " + this.state.readyKit.local_map}<br></br>
+        {"can opener: " + this.state.readyKit.can_opener}<br></br>
+        {"local map: " + this.state.readyKit.local_map}<br></br>
         {"cash: " + this.state.readyKit.cash}<br></br>
         {"medications: " + this.state.readyKit.medications}<br></br>
       </div>
