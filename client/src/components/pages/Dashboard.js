@@ -3,6 +3,7 @@ import ReadyKit from '../readykit';
 import Gold from '../metals/gold.js';
 import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
+import Disasters from '../../components/disasters';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Dashboard extends Component {
         <div id='app'></div>
           <div className="card" id = 'disaster'>
             <h2>Disaster Data Goes Here</h2>
-              <p>MI Data</p>
+              <Disasters></Disasters>
           </div>
           <br></br>
           <div id='app'></div>
