@@ -38,12 +38,14 @@ class Dashboard extends Component {
               <p>MW Data</p>
           </div>
           <br></br>
+          <br></br>
           <div id='app'></div>
           <div className="card" id = 'ReadyKit'>
-            <h2>ReadyKit</h2>
-            <ReadyKit username={this.state.currentUserName}></ReadyKit>
+            <h2></h2>
           </div>
+          <ReadyKit username={this.state.currentUserName}></ReadyKit>
       </div>
+
     );
   }
 }
