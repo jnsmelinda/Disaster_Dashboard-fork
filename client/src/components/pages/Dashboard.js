@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReadyKit from '../readykit';
-import Stocks from '../metals/gold.js';
+import Gold from '../metals/gold.js';
 import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 
@@ -25,11 +25,13 @@ class Dashboard extends Component {
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'stock'>
-          <Stocks/>
+            <h2>Gold Spot Price Oz</h2>
+          <Gold/>
           </div>
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'silver'>
+          <h2>Silver Spot Price Oz</h2>
           <Silver/>
           </div>
           <br></br>
