@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // const SEARCH_KEY = 'cute puppy kitten';
 
@@ -32,7 +32,7 @@ class RandomGif extends React.Component {
     return(
       <div className='card-item'>
           <h1>{`Random ${this.state.keyword} image`}</h1>
-          <img src={this.state.imageSrc}
+          <img src={this.state.imageSrc}alt="Random Puppy Gif"
             style={{width: "100%", maxHeight:"auto"}}/>
         <button onClick={this.loadImage} className='btn-loadimg'>woof!</button>
       </div>
