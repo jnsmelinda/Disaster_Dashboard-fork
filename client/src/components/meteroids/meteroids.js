@@ -29,10 +29,13 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-09-17&end_date=2020
 
   }
 
+
   render() {
     return(
       <div className='card-item'>
         {<h1>Space Data Here </h1>}
+
+
                    {/* <h1>{ 'Space ' + JSON.stringify(this.state.apiResults.near_earth_objects)}</h1> */}
 
       </div>
