@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
+import ReadyKit from '../readykit';
 import Stocks from '../stocks/stocks.js';
 
 class Dashboard extends Component {
-  state = {
-    currentUserName: ''
-  };
-
-  componentDidMount() {
-    const idToken = JSON.parse(localStorage.getItem('okta-token-storage'));
-    this.setState({
-
-      currentUserName: idToken.idToken.claims.name
-    });
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUserName: JSON.parse(localStorage.getItem('okta-token-storage')).idToken.claims.name
+    };
   }
 
   render() {
-    const {  currentUserName } = this.state;
-
     return (
       <div>
-        <h1>Welcome {currentUserName} !</h1>
+        <h1>Welcome {this.state.currentUserName} !</h1>
         <br></br>
+        <ReadyKit username={this.state.currentUserName}></ReadyKit>
         <div id='app'></div>
           <div className="card" id = 'disaster'>
             <h2>Disaster Data Goes Here</h2>
@@ -43,11 +38,7 @@ class Dashboard extends Component {
             <h2>Covid Data Goes Here</h2>
               <p>MW Data</p>
           </div>
-
-
       </div>
-
-
     );
   }
 }
