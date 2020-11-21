@@ -5,7 +5,8 @@ class Stocks extends React.Component {
     super(props);
     this.state = {
       apiKey: 'goldapi-g8eiukhi5pe0t-io',
-      apiResults: ''
+      apiResults: '',
+
     }
 
   }
@@ -35,7 +36,7 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
   render() {
     return(
       <div className='card-item'>
-          <h1>{ 'Gold Price ' + this.state.apiResults.prev_close_price}</h1>
+          <h1>{ 'Gold Price ' + this.state.apiResults.price}</h1>
 
       </div>
     );
