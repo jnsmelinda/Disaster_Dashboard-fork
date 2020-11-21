@@ -20,7 +20,7 @@ class Dashboard extends Component {
         <br></br>
         <div id='app'></div>
           <div className="card" id = 'disaster'>
-            <h2>Disaster Data Goes Here</h2>
+            <h2>10 current and most recent disasters</h2>
               <Disasters></Disasters>
           </div>
           <br></br>
