@@ -25,19 +25,16 @@ var requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-
 fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
   .catch(error => console.log('error', error));
-
   }
-
+  
   render() {
     return(
       <div className='card-item'>
           <h1>{ '$' +  this.state.apiResults.price + ' USD'} </h1>
-
       </div>
     );
   }
