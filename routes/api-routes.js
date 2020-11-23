@@ -23,4 +23,28 @@ module.exports = function (app) {
       .then((result) => res.json(result))
       .catch((err) => next(err));
   });
+
+  app.post('/api/readykit/create/:currentUserName', function (req, res, next) {
+    console.log(req.body);
+    db.ReadyKit.create({
+      currentUserName: req.params.currentUserName,
+      water: false,
+      non_perishable_food: false,
+      radio: false,
+      batteries: false,
+      flashlight: false,
+      first_aid_kit: false,
+      whistle: false,
+      dust_mask: false,
+      moist_towlettes: false,
+      garbadge_bags: false,
+      wrench: false,
+      can_opener: false,
+      local_map: false,
+      cash: false,
+      medications: false,
+    })
+    .then((result) => res.json(result))
+    .catch((err) => next(err));
+  });
 }
