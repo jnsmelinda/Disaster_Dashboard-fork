@@ -4,7 +4,6 @@ class Silver extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      apiKey: 'goldapi-g8eiukhi5pe0t-io',
       apiResults: '',
 
     }
@@ -30,7 +29,7 @@ fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
   .then(result => this.setState({apiResults: JSON.parse(result)}))
   .catch(error => console.log('error', error));
   }
-  
+
   render() {
     return(
       <div className='card-item'>
