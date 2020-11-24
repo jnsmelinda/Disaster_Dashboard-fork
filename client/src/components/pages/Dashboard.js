@@ -5,7 +5,7 @@ import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 import Disasters from '../../components/disasters';
 import { ListItem } from "../list";
-import CovidSearchResults from '../Covid/CovidSearchResults.js';
+import CovidSearchResults from '../covid/CovidSearchResults.js';
 
 class Dashboard extends Component {
   constructor(props) {
