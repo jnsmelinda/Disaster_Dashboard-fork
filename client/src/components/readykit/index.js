@@ -5,43 +5,68 @@ class ReadyKit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      readyKit: {}
-    };
+      water: false,
+      non_perishable_food: false,
+      radio: false,
+      batteries: false,
+      flashlight: false,
+      first_aid_kit: false,
+      whistle: false,
+      dust_mask: false,
+      moist_towlettes: false,
+      garbadge_bags: false,
+      wrench: false,
+      can_opener: false,
+      local_map: false,
+      cash: false,
+      medications: false
+    }
+
     API.getReadyKitByUser(this.props.username)
-      .then(res => this.setState({ readyKit: res.data }))
+      .then(res => this.setState(res.data))
       .catch(err => console.log(err));
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    this.setState({ [event.target.name]: event.target.checked });
+    // send data to backend
   }
 
   render() {
+    console.log(this.state);
     return (
       <div>
-        <input type="checkbox" value="water" name="water" onClick={() => this.handleClick()}/> Water
+        <input type="checkbox" name="water" onChange={this.handleInputChange} checked={this.state.water} />Water
         <br></br>
-        <input type="checkbox" value="food" name="food" onClick={() => this.handleClick()}/> Non-perishable food
+        <input type="checkbox" name="non_perishable_food" onChange={this.handleInputChange} checked={this.state.non_perishable_food} />Non-perishable food
         <br></br>
-        <input type="checkbox" value="batteries" name="batteries" onClick={() => this.handleClick()}/> Batteries
+        <input type="checkbox" name="radio" onChange={this.handleInputChange} checked={this.state.radio} />Radio
         <br></br>
-        <input type="checkbox" value="flashlight" name="flashlight" onClick={() => this.handleClick()}/> Flashlight
+        <input type="checkbox" name="batteries" onChange={this.handleInputChange} checked={this.state.batteries} />Batteries
         <br></br>
-        <input type="checkbox" value="first_aid_kit" name="first_aid_kit" onClick={() => this.handleClick()}/> First Aid Kit
+        <input type="checkbox" name="flashlight" onChange={this.handleInputChange} checked={this.state.flashlight} />Flashlight
         <br></br>
-        <input type="checkbox" value="whistle" name="whistle" onClick={() => this.handleClick()}/> Whistle
+        <input type="checkbox" name="first_aid_kit" onChange={this.handleInputChange} checked={this.state.first_aid_kit} />First Aid Kit
         <br></br>
-        <input type="checkbox" value="dust_mask" name="dust_mask" onClick={() => this.handleClick()}/> Dust Mask
+        <input type="checkbox" name="whistle" onChange={this.handleInputChange} checked={this.state.whistle} />Whistle
         <br></br>
-        <input type="checkbox" value="moist_towlettes" name="moist_towlettes" onClick={() => this.handleClick()}/> Moist Towlettes
+        <input type="checkbox" name="dust_mask" onChange={this.handleInputChange} checked={this.state.dust_mask} />Dust Mask
         <br></br>
-        <input type="checkbox" value="garbadge_bag" name="garbadge_bag" onClick={() => this.handleClick()}/> Garbadge Bag
+        <input type="checkbox" name="moist_towlettes" onChange={this.handleInputChange} checked={this.state.moist_towlettes} />Moist Towlettes
         <br></br>
-        <input type="checkbox" value="wrench" name="wrench" onClick={() => this.handleClick()}/> Wrench
+        <input type="checkbox" name="garbadge_bag" onChange={this.handleInputChange} checked={this.state.garbadge_bags} />Garbadge Bag
         <br></br>
-        <input type="checkbox" value="can_opener" name="can_opener" onClick={() => this.handleClick()}/> Can Opener
+        <input type="checkbox" name="wrench" onChange={this.handleInputChange} checked={this.state.wrench} />Wrench
         <br></br>
-        <input type="checkbox" value="local_map" name="local_map" onClick={() => this.handleClick()}/> Local Map
+        <input type="checkbox" name="can_opener" onChange={this.handleInputChange} checked={this.state.can_opener} />Can Opener
         <br></br>
-        <input type="checkbox" value="cash" name="cash" onClick={() => this.handleClick()}/> Cash
+        <input type="checkbox" name="local_map" onChange={this.handleInputChange} checked={this.state.local_map} />Local Map
         <br></br>
-        <input type="checkbox" value="medications" name="medications" onClick={() => this.handleClick()}/> Medications
+        <input type="checkbox" name="cash" onChange={this.handleInputChange} checked={this.state.cash} />Cash
+        <br></br>
+        <input type="checkbox" name="medications" onChange={this.handleInputChange} checked={this.state.medications} />Medications
       </div>
     );
   }
