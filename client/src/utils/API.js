@@ -12,7 +12,7 @@ export default {
   getCovidByState: function(queryCovid) {
 
     const startDate = new Date();
-    startDate.setDate(startDate.getDate() - 6);
+    startDate.setDate(startDate.getDate() - 5);
     const yyyyS = startDate.getFullYear();
     const mmS = startDate.getMonth() + 1;
     const ddS = startDate.getDate();
