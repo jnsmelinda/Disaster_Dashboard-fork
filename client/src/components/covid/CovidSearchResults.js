@@ -3,6 +3,7 @@ import API from '../../utils/API';
 import CovidCard from './CovidCard';
 import CovidDetail from './CovidDetail';
 import CovidSearchForm from './CovidSearchForm';
+import CovidChart from './CovidChart';
 
 
 class CovidSearchResults extends Component {
@@ -48,8 +49,12 @@ class CovidSearchResults extends Component {
                 handleFormSubmit={this.handleFormSubmit}
               />
               <CovidDetail
-                newCases={this.state.result[0].new_case}
-                newDeaths={this.state.result[0].new_death}
+                newCases={this.state.result[5].new_case}
+                newDeaths={this.state.result[5].new_death}
+              />
+              <CovidChart
+                newCases={this.state.result[5].new_case}
+                newDeaths={this.state.result[5].new_death}
               />
             </CovidCard>
     );
