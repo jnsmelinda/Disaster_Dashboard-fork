@@ -6,10 +6,12 @@ export default props => {
   return (
     <Menu>
 
+
 <div>
       <h2>Are you Ready?</h2>
       </div>
       <div className="menu-item" id = 'readyKit' >
+
      <ReadyKit/>
       </div>
       <h3>Need more data? </h3>
