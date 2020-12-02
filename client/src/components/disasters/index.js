@@ -1,6 +1,9 @@
 import API from "../../utils/API";
 import { Card, ListGroup } from 'react-bootstrap';
+import { BiGlobe, BiCalendarExclamation } from "react-icons/bi";
+import { FaHouseDamage } from "react-icons/fa";
 import React from 'react';
+
 
 class Disasters extends React.Component {
   constructor(props) {
@@ -23,9 +26,12 @@ class Disasters extends React.Component {
           <Card key={index} className="col-xs-12 col-md-6 float-sm-left" id="cardID">
             <Card.Body id="cardBodyId">{disaster.title}
               <ListGroup id="listgroup" key={index}>
-                <ListGroup.Item>date: {disaster.date}</ListGroup.Item>
-                <ListGroup.Item>coordinates: {disaster.geometry[0].toFixed(2)}°N, {disaster.geometry[1].toFixed(2)}°E</ListGroup.Item>
-                <ListGroup.Item>category: {disaster.category}</ListGroup.Item>
+                <ListGroup.Item>
+                  <BiCalendarExclamation></BiCalendarExclamation> {disaster.date}</ListGroup.Item>
+                <ListGroup.Item>
+                  <BiGlobe></BiGlobe> {disaster.geometry[0].toFixed(2)}°N, {disaster.geometry[1].toFixed(2)}°E</ListGroup.Item>
+                <ListGroup.Item>
+                  <FaHouseDamage></FaHouseDamage> {disaster.category}</ListGroup.Item>
               </ListGroup>
             </Card.Body>
           </Card>
