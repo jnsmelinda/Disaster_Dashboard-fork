@@ -1,4 +1,5 @@
 import API from "../../utils/API";
+import { Card, ListGroup } from 'react-bootstrap';
 import React from 'react';
 
 class Disasters extends React.Component {
@@ -17,11 +18,17 @@ class Disasters extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="row mx-auto">
         {this.state.disasters.map((disaster, index) => (
-          <ul key={index}>
-            {index}. {disaster.title} coordinates: {disaster.geometry[0].toFixed(2)}(lat), {disaster.geometry[1].toFixed(2)}(lon) date: {disaster.date} category: {disaster.category}
-          </ul>
+          <Card key={index} className="col-xs-12 col-md-6 float-sm-left" id="cardID">
+            <Card.Body id="cardBodyId">{disaster.title}
+              <ListGroup id="listgroup" key={index}>
+                <ListGroup.Item>date: {disaster.date}</ListGroup.Item>
+                <ListGroup.Item>coordinates: {disaster.geometry[0].toFixed(2)}°N, {disaster.geometry[1].toFixed(2)}°E</ListGroup.Item>
+                <ListGroup.Item>category: {disaster.category}</ListGroup.Item>
+              </ListGroup>
+            </Card.Body>
+          </Card>
         ))}
       </div>
     );
