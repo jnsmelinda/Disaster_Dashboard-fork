@@ -23,9 +23,10 @@ class Disasters extends React.Component {
     return (
       <div className="row mx-auto">
         {this.state.disasters.map((disaster, index) => (
-          <Card key={index} className="col-xs-12 col-md-6 float-sm-left" id="cardID">
-            <Card.Body id="cardBodyId">{disaster.title}
-              <ListGroup id="listgroup" key={index}>
+          <Card key={index} className="col-xs-12 col-md-6 float-sm-left">
+            <Card.Body>
+              <Card.Title>{disaster.title}</Card.Title>
+              <ListGroup key={index}>
                 <ListGroup.Item>
                   <BiCalendarExclamation></BiCalendarExclamation> {disaster.date}</ListGroup.Item>
                 <ListGroup.Item>
