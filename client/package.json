@@ -6,11 +6,12 @@
   "dependencies": {
     "@okta/okta-react": "^1.0.2",
     "@okta/okta-signin-widget": "^2.9.0",
-    "bootstrap": "4.5.3",
+    "bootstrap": "^4.5.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "^1.1.4",
+    "react-bootstrap": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
