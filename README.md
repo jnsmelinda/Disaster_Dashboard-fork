@@ -22,7 +22,9 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
 - Heroku: https://disaster-list-dashboard.herokuapp.com/Dashboard
   - Email: testaccount@gmail.com
   - Password: GenericPassword12!
+
 OR 
+
   - Email: account2@gmail.com 
   - Password: GenericPassword12!!
 
@@ -53,5 +55,5 @@ This repository is protected under the [MIT](https://choosealicense.com/licenses
 Please contribute to this project by opening a Pull Request and following the `eslint` rules and the [Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
 ## Presentation PDF
-![Git]([presentation].PNG)  
-Card images are from Canva professional.
+![Git](presentation.PNG)  
+Card images are from Canva professional. Data is not meant as professional advice, please validate any recommendations/data with a licensed professional. 
