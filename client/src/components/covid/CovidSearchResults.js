@@ -19,7 +19,21 @@ class CovidSearchResults extends Component {
 
   searchCovid = queryCovid => {
     API.getCovidByState(queryCovid)
-      .then(res => this.setState({ result: res.data }))
+    .then(res => {
+      const data = [];
+      for (let i = 0; i < 5; i++) {
+        if (res.data[i]) {
+          data.push(res.data[i])
+        } else {
+          data.push(
+            {
+              new_case: 0,
+              new_death: 0
+            }
+          )
+        }
+      }
+    this.setState({ result: data })})
       .catch(err => console.log(err));
   };
 
