@@ -38,7 +38,7 @@ class CovidSearchResults extends Component {
   };
 
   handleInputChange = event => {
-    const value = event.target.value;
+    const value = event.target.value.trim().toUpperCase();
     const name = event.target.name;
     this.setState({
       [name]: value
