@@ -20,10 +20,10 @@ class Meteroid extends React.Component {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch(`https://api.nasa.gov/neo/rest/v1/feed?
-      start_date=${this.state.todayDate}&
-      end_date=${this.state.todayDate}&
-      api_key=${this.state.apiKey}`, requestOptions)
+    fetch('https://api.nasa.gov/neo/rest/v1/feed' +
+      `?start_date=${this.state.todayDate}` +
+      `&end_date=${this.state.todayDate}` +
+      `&api_key=${this.state.apiKey}`, requestOptions)
       .then((response) => response.text())
       .then((result) => this.setState({apiResults: JSON.parse(result)}))
       .then((result) => {
