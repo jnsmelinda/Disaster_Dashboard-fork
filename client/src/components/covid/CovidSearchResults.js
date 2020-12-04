@@ -8,16 +8,23 @@ import CovidChartDeaths from './CovidChartDeaths';
 
 
 class CovidSearchResults extends React.Component {
-  state = {
-    result: [],
-    searchCovid: ''
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: [],
+      searchCovid: ''
+    };
+
+    this.searchCovid = this.searchCovid.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
 
   componentDidMount() {
     this.searchCovid('WA');
   }
 
-  searchCovid = queryCovid => {
+  searchCovid(queryCovid) {
     API.getCovidByState(queryCovid)
       .then((res) => {
         const data = [];
@@ -38,7 +45,7 @@ class CovidSearchResults extends React.Component {
       .catch((err) => console.log(err));
   };
 
-  handleInputChange = event => {
+  handleInputChange(event) {
     const value = event.target.value.trim().toUpperCase();
     const name = event.target.name;
     const stateAbbv = {
@@ -108,7 +115,7 @@ class CovidSearchResults extends React.Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleFormSubmit(event) {
     event.preventDefault();
     this.searchCovid(this.state.searchCovid);
   };
