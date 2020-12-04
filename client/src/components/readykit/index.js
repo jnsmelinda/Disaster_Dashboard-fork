@@ -1,4 +1,4 @@
-import API from "../../utils/API";
+import API from '../../utils/API';
 import React from 'react';
 
 class ReadyKit extends React.Component {
@@ -20,10 +20,10 @@ class ReadyKit extends React.Component {
       local_map: false,
       cash: false,
       medications: false
-    }
+    };
 
     API.getReadyKitByUser(this.props.userName)
-      .then(res => this.setState(res.data))
+      .then((res) => this.setState(res.data))
       .catch(console.err);
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -36,11 +36,10 @@ class ReadyKit extends React.Component {
   }
 
   handleInputChange(event) {
-    this.setState({ [event.target.name]: event.target.checked }, this.sendStateChangeToBackend);
+    this.setState({[event.target.name]: event.target.checked}, this.sendStateChangeToBackend);
   }
 
   render() {
-
     return (
       <div>
         <input type="checkbox" name="water" onChange={this.handleInputChange} checked={this.state.water} /> Water
