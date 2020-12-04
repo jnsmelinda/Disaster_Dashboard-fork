@@ -36,6 +36,7 @@
         140
     ],
     "comma-dangle": "off",
-    "require-jsdoc": "off"
+    "require-jsdoc": "off",
+    "react/prop-types": "off"
     }
 }

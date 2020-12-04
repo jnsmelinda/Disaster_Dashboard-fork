@@ -5,7 +5,6 @@ function CovidSearchForm(props) {
     <form>
       <div className="form-group">
         <input
-          // eslint-disable-next-line react/prop-types
           value={props.value}
           onChange={props.handleInputChange}
           name="searchCovid"
