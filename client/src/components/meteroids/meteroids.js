@@ -20,7 +20,10 @@ class Meteroid extends React.Component {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&end_date=${this.state.todayDate}&api_key=${this.state.apiKey}`, requestOptions)
+    fetch(`https://api.nasa.gov/neo/rest/v1/feed?
+      start_date=${this.state.todayDate}&
+      end_date=${this.state.todayDate}&
+      api_key=${this.state.apiKey}`, requestOptions)
       .then((response) => response.text())
       .then((result) => this.setState({apiResults: JSON.parse(result)}))
       .then((result) => {
@@ -34,9 +37,15 @@ class Meteroid extends React.Component {
             'id': i + 1,
             'Name': ' ' + apiData[i].name,
             'Hazardous': ' ' + apiData[i].is_potentially_hazardous_asteroid,
-            'MilesDiameter': ' ' + apiData[i].estimated_diameter.miles.estimated_diameter_max.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2}),
-            'MissEarth': ' ' + Number(apiData[i].close_approach_data[0].miss_distance.miles).toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2}),
-            'VelocityMPH': ' ' + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2})
+            'MilesDiameter': ' ' + apiData[i].estimated_diameter.miles.estimated_diameter_max.toLocaleString('en', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2}),
+            'MissEarth': ' ' + Number(apiData[i].close_approach_data[0].miss_distance.miles).toLocaleString('en', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2}),
+            'VelocityMPH': ' ' + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toLocaleString('en', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2})
           };
           finalData.push(meteroids);
         }
@@ -54,10 +63,16 @@ class Meteroid extends React.Component {
         {this.state.apiResults.length ? (
           <List>
 
-            <h3 className="mb-3 mt-3" ><img src={process.env.PUBLIC_URL + '/assets/images/comet.png'} alt = 'meteroid'/> Near Earth Events - Today </h3>
+            <h3 className="mb-3 mt-3" ><img
+              src={process.env.PUBLIC_URL + '/assets/images/comet.png'}
+              alt = 'meteroid'/> Near Earth Events - Today </h3>
             {this.state.apiResults.map((result) => (
               <ListItem key={result.id}>
-              Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Speed: {result.VelocityMPH} MPH
+              Meteor Name:{result.Name} -
+              Danger to Earth: {result.Hazardous.toUpperCase()} -
+              Diameter: {result.MilesDiameter} Miles -
+              Avoided Earth by: {result.MissEarth} Miles -
+              Speed: {result.VelocityMPH} MPH
               </ListItem>
             ))}
           </List>

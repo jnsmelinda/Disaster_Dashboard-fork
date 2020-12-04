@@ -5,13 +5,11 @@ import ReadyKit from '../readykit';
 
 class Sidebar extends React.Component {
   super(props) {
-
   }
 
   render() {
     return (
       <Menu>
-
         <div>
           <h2>{this.props.userName} Are you Ready?</h2>
         </div>
@@ -36,7 +34,6 @@ class Sidebar extends React.Component {
           Puppies
           </button>
         </a>
-
       </Menu>
     );
   }

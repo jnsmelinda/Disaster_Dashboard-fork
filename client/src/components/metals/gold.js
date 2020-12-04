@@ -12,7 +12,6 @@ class Gold extends React.Component {
     this.loadImage();
   }
 
-
   loadImage() {
     const myHeaders = new Headers();
     myHeaders.append('x-access-token', process.env.REACT_APP_METALAPIS);
@@ -33,7 +32,10 @@ class Gold extends React.Component {
   render() {
     return (
       <div className='card-item'>
-        <h1>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' USD'}  </h1>
+        <h1>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2}
+        ) + ' USD'}  </h1>
 
       </div>
     );

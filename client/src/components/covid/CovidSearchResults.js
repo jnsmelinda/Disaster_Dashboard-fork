@@ -19,21 +19,22 @@ class CovidSearchResults extends Component {
 
   searchCovid = queryCovid => {
     API.getCovidByState(queryCovid)
-    .then(res => {
-      const data = [];
-      for (let i = 0; i < 5; i++) {
-        if (res.data[i]) {
-          data.push(res.data[i])
-        } else {
-          data.push(
-            {
-              new_case: 0,
-              new_death: 0
-            }
-          )
+      .then(res => {
+        const data = [];
+        for (let i = 0; i < 5; i++) {
+          if (res.data[i]) {
+            data.push(res.data[i])
+          } else {
+            data.push(
+              {
+                new_case: 0,
+                new_death: 0
+              }
+            )
+          }
         }
-      }
-    this.setState({ result: data })})
+        this.setState({ result: data })
+      })
       .catch(err => console.log(err));
   };
 
@@ -113,39 +114,39 @@ class CovidSearchResults extends Component {
   };
 
   render() {
-    if (this.state.result.length === 0 ) {
+    if (this.state.result.length === 0) {
       return null;
     }
 
     return (
-            <CovidCard
-              heading= "Search by US State">
-              <CovidSearchForm
-                value={this.state.searchCovid}
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-              />
-              <CovidDetail
-                stateFullName={this.state.stateFullName}
-                newCases={this.state.result[4].new_case}
-                newDeaths={this.state.result[4].new_death}
-              />
-              <CovidChartCases
-                newCasesOne={this.state.result[0].new_case}
-                newCasesTwo={this.state.result[1].new_case}
-                newCasesThree={this.state.result[2].new_case}
-                newCasesFour={this.state.result[3].new_case}
-                newCasesFive={this.state.result[4].new_case}
+      <CovidCard
+        heading="Search by US State">
+        <CovidSearchForm
+          value={this.state.searchCovid}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+        />
+        <CovidDetail
+          stateFullName={this.state.stateFullName}
+          newCases={this.state.result[4].new_case}
+          newDeaths={this.state.result[4].new_death}
+        />
+        <CovidChartCases
+          newCasesOne={this.state.result[0].new_case}
+          newCasesTwo={this.state.result[1].new_case}
+          newCasesThree={this.state.result[2].new_case}
+          newCasesFour={this.state.result[3].new_case}
+          newCasesFive={this.state.result[4].new_case}
 
-              />
-              <CovidChartDeaths
-                newDeathsOne={this.state.result[0].new_death}
-                newDeathsTwo={this.state.result[1].new_death}
-                newDeathsThree={this.state.result[2].new_death}
-                newDeathsFour={this.state.result[3].new_death}
-                newDeathsFive={this.state.result[4].new_death}
-              />
-            </CovidCard>
+        />
+        <CovidChartDeaths
+          newDeathsOne={this.state.result[0].new_death}
+          newDeathsTwo={this.state.result[1].new_death}
+          newDeathsThree={this.state.result[2].new_death}
+          newDeathsFour={this.state.result[3].new_death}
+          newDeathsFive={this.state.result[4].new_death}
+        />
+      </CovidCard>
     );
   }
 }

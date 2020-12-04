@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Silver extends React.Component {
   constructor(props) {
     super(props);
@@ -33,11 +32,13 @@ class Silver extends React.Component {
   render() {
     return (
       <div className='card-item'>
-        <h1>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' USD'} </h1>
+        <h1>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2}
+        ) + ' USD'} </h1>
       </div>
     );
   }
 }
-
 
 export default Silver;
