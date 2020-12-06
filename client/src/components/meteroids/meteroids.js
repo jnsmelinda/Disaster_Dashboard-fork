@@ -29,8 +29,12 @@ class Meteroid extends React.Component {
       .then((result) => {
         const apiData = this.state.apiResults.near_earth_objects[this.state.todayDate.toString()];
         const finalData = [];
+        let limit = 5
+        if (apiData.length < 5) {
+          limit = apiData.length;
+        }
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < limit; i++) {
           const meteroids =
 
           {
