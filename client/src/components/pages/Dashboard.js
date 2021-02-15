@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Gold from '../metals/gold.js';
 import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 import Disasters from '../../components/disasters';
-import {ListItem} from '../list';
+import { ListItem } from '../list';
 import CovidSearchResults from '../covid/CovidSearchResults.js';
 import Sidebar from '../layout/Sidebar.js';
+import ReadyKit from '../readykit';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -25,9 +26,14 @@ class Dashboard extends Component {
             <Sidebar
               pageWrapId={'page-wrap'}
               outerContainerId={'outer-container'}
-              userName={this.state.currentUserName}>
+              >
             </Sidebar>
             <h1>Welcome {this.state.currentUserName} !</h1>
+            <br></br>
+            <div className="card" id='ReadyKit'>
+              <h2>Ready Kit</h2>
+              <ReadyKit username={this.state.currentUserName}></ReadyKit>
+            </div>
             <br></br>
             <div className="card" id="Corgis">
               <h2>
@@ -76,9 +82,9 @@ class Dashboard extends Component {
 
               <div id="nasa"></div>
               <div className="card">
-              <h3 className="mb-3 mt-3" ><img
-              src={process.env.PUBLIC_URL + '/assets/images/comet.png'}
-              alt = 'meteroid'/> Near Earth Events - Today </h3>
+                <h3 className="mb-3 mt-3" ><img
+                  src={process.env.PUBLIC_URL + '/assets/images/comet.png'}
+                  alt='meteroid' /> Near Earth Events - Today </h3>
                 <Meteroids />
               </div>
               <br></br>
