@@ -160,11 +160,10 @@ Sidebar wrapper styles
   margin-right: 2px;
 }
 
-#readyKit {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-  outline-color: -webkit-focus-ring-color;
-  outline-style: auto;
+#ReadyKit {
+  width: 40%;
+  margin-left: 2px;
+  margin-right: 10px;
 }
 
 .list-group-item.list-group-item {

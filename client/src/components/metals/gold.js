@@ -32,11 +32,11 @@ class Gold extends React.Component {
   render() {
     return (
       <div className='card-item'>
-        <h1>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {
+        <h2>{ '$' + Number(this.state.apiResults.price).toLocaleString('en', {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2}
-        ) + ' USD'}  </h1>
-
+        ) + ' USD'}
+        </h2>
       </div>
     );
   }
