@@ -23,12 +23,10 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
   - Email: testaccount@gmail.com
   - Password: GenericPassword12!
 
-OR 
+OR
 
   - Email: account2@gmail.com 
   - Password: GenericPassword12!!
-
-
 
 ## Technologies
 - [React](https://reactjs.org/)
@@ -43,7 +41,15 @@ OR
 
 ## Installation
 Installation is not needed, as the entire application is on Heroku. Please use the General Account to login here > https://disaster-list-dashboard.herokuapp.com/Dashboard . (testaccount@gmail.com, GenericPassword12!)
+Local execution: to `client/.env` file:
 
+```
+REACT_APP_METALAPIS=***YOUR API KEY***
+REACT_APP_METEORS=***YOUR API KEY***
+REACT_APP_PUPPIES=***YOUR API KEY***
+```
+
+Resources:[NEO-NASA](https://api.nasa.gov/neo/) (Near Earth Objects),[GOLDAPI](https://www.goldapi.io/api/) (Gold & Silver), PUPPIES](https://api.giphy.com/v1/gifs/) (Puppies)
 
 ## Usage
 Visit the heroku link, login with the test account and look at all of the disaster data. If you want to check what items are currently in the readykit, click the hamburger menu at the top left to update as necessary. If you want to see previous projects such as Earthquake Data and Air Quality Data, please utilize the links above the logout button. Please make sure to look at some adorable puppies before logging out for the day. 
