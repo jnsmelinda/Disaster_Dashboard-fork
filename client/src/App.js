@@ -35,8 +35,11 @@ class App extends Component {
               <Route
                 path="/login"
                 render={() => (
-                  <Login baseUrl="https://dev-1958578.okta.com" />
-                )}
+                  <div>
+                    <Login baseUrl="https://dev-1958578.okta.com" />
+                    <div>Test Account Credentials: testaccount@gmail.com - GenericPassword12!</div>
+                  </div>
+                  )}
               />
               <Route path="/implicit/callback" component={ImplicitCallback} />
               <Route path="/puppies" exact={true} component={RandomGif} />
